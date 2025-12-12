@@ -1,4 +1,4 @@
-# Persian Audio/Video Transcription Tool
+# Voice-Transcriber
 
 A powerful, GPU-accelerated audio and video transcription tool with native Persian/Farsi language support, featuring advanced text normalization and multiple transcription engines.
 
