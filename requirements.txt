@@ -56,7 +56,7 @@ SpeechRecognition==3.14.3
 # -----------------------------------------------------------------------------
 
 # FFmpeg Python bindings
-ffmpeg-python==0.2.0
+ffmpeg-python==0.1.17
 
 # Audio manipulation
 pydub==0.25.1
@@ -64,9 +64,6 @@ pydub==0.25.1
 # Windows: choco install ffmpeg OR download from https://ffmpeg.org
 # Linux: sudo apt install ffmpeg
 # macOS: brew install ffmpeg
-
-# Audio codec support
-audioop-lts==0.2.2
 
 # PyAV for advanced video processing
 av==16.0.1
