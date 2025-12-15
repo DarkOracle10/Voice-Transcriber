@@ -7,7 +7,7 @@ A fully-featured, GPU-accelerated voice transcription toolkit with native Persia
 - Persian normalization (Arabic→Persian chars, whitespace, numerals)
 - Parallel batch processing with progress & robust error handling
 - CUDA auto-detection with CPU fallback
-- Clean packaging with console scripts `voice-transcriber`, `vtranscribe`
+- Clean packaging with console scripts `persian-transcriber`, `vtranscribe`
 
 ## Changes
 - Packaging: setup.py and pyproject.toml with accurate entry points and deps
@@ -26,8 +26,8 @@ pip install -e ".[gpu,persian]"
 
 ## Quick Start
 ```bash
-voice-transcriber audio.mp3 -e faster_whisper -m large-v3 -d cuda
-voice-transcriber ./recordings -r --output-dir ./transcriptions
+persian-transcriber audio.mp3 -e faster_whisper -m large-v3 -d cuda
+persian-transcriber ./recordings -r --output-dir ./transcriptions
 ```
 
 ## Notes

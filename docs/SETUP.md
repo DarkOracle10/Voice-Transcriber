@@ -40,8 +40,8 @@ Complete installation and configuration guide for the Voice Transcription toolki
 ### Step 1: Clone or Download
 
 ```bash
-git clone https://github.com/YourUsername/Voice-Transcriber.git
-cd Voice-Transcriber
+git clone https://github.com/YourUsername/persian-audio-transcriber.git
+cd persian-audio-transcriber
 ```
 
 ### Step 2: Create Virtual Environment
@@ -503,7 +503,7 @@ python -m src transcribe --folder ./audio --output results.csv --engine openai -
 ## Support
 
 For issues not covered here:
-1. Check existing [GitHub Issues](https://github.com/YourUsername/Voice-Transcriber/issues)
+1. Check existing [GitHub Issues](https://github.com/YourUsername/persian-audio-transcriber/issues)
 2. Run with `--log-level DEBUG` for detailed logs
 3. Open a new issue with:
    - Platform (Windows/Linux/macOS)

@@ -1,6 +1,6 @@
-# Voice Transcriber
+# Persian Audio Transcriber
 
-A fully-featured, GPU-accelerated voice transcription toolkit with Persian/Farsi language support, parallel batch processing, and multiple transcription engines.
+A fully-featured, GPU-accelerated audio transcription toolkit with Persian/Farsi language support, parallel batch processing, and multiple transcription engines.
 
 ## 🎯 Features
 
@@ -48,8 +48,8 @@ A fully-featured, GPU-accelerated voice transcription toolkit with Persian/Farsi
 #### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/DarkOracle10/Voice-Transcriber.git
-cd Voice-Transcriber
+git clone https://github.com/DarkOracle10/persian-audio-transcriber.git
+cd persian-audio-transcriber
 ```
 
 #### 2. Create Virtual Environment
@@ -116,19 +116,19 @@ export OPENAI_API_KEY="sk-proj-..."
 
 ```bash
 # Transcribe a single file
-voice-transcriber audio.mp3
+persian-transcriber audio.mp3
 
 # Transcribe with GPU and large model
-voice-transcriber audio.mp3 -m large-v3 -d cuda
+persian-transcriber audio.mp3 -m large-v3 -d cuda
 
 # Transcribe with OpenAI API
-voice-transcriber audio.mp3 -e openai_api --api-key sk-...
+persian-transcriber audio.mp3 -e openai_api --api-key sk-...
 
 # Generate SRT subtitles
-voice-transcriber video.mp4 -f srt
+persian-transcriber video.mp4 -f srt
 
 # Batch process directory recursively
-voice-transcriber ./recordings/ -r --output-dir ./transcriptions
+persian-transcriber ./recordings/ -r --output-dir ./transcriptions
 ```
 
 ### Using Python API
@@ -156,7 +156,7 @@ results = transcriber.scan_and_transcribe(
 ### Command-Line Interface
 
 ```bash
-voice-transcriber <input_path> [OPTIONS]
+persian-transcriber <input_path> [OPTIONS]
 ```
 
 **Engine Options:**

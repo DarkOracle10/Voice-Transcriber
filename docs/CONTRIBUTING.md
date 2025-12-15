@@ -38,7 +38,7 @@ Thank you for considering contributing to the Voice Transcription toolkit! This 
 
 ### Reporting Bugs
 
-1. Check [existing issues](https://github.com/YourUsername/Voice-Transcriber/issues) to avoid duplicates
+1. Check [existing issues](https://github.com/YourUsername/persian-audio-transcriber/issues) to avoid duplicates
 2. Use the bug report template
 3. Include:
    - Platform (Windows/Linux/macOS)
@@ -49,7 +49,7 @@ Thank you for considering contributing to the Voice Transcription toolkit! This 
 
 ### Requesting Features
 
-1. Check [existing issues](https://github.com/YourUsername/Voice-Transcriber/issues) for similar requests
+1. Check [existing issues](https://github.com/YourUsername/persian-audio-transcriber/issues) for similar requests
 2. Use the feature request template
 3. Describe:
    - Use case and motivation
@@ -64,11 +64,11 @@ Thank you for considering contributing to the Voice Transcription toolkit! This 
 
 ```bash
 # Fork on GitHub, then clone your fork
-git clone https://github.com/YourUsername/Voice-Transcriber.git
-cd Voice-Transcriber
+git clone https://github.com/YourUsername/persian-audio-transcriber.git
+cd persian-audio-transcriber
 
 # Add upstream remote
-git remote add upstream https://github.com/OriginalOwner/Voice-Transcriber.git
+git remote add upstream https://github.com/OriginalOwner/persian-audio-transcriber.git
 ```
 
 ### 2. Create Virtual Environment
@@ -756,7 +756,7 @@ git push origin feature/add-azure-engine
 
 ## Questions?
 
-- Check [GitHub Discussions](https://github.com/YourUsername/Voice-Transcriber/discussions)
+- Check [GitHub Discussions](https://github.com/YourUsername/persian-audio-transcriber/discussions)
 - Open an issue with tag `question`
 - Email: maintainer@example.com
 

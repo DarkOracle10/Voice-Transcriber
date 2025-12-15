@@ -3,7 +3,7 @@ defaults:
   - _self_
 
 app:
-  name: voice-transcriber
+  name: persian-audio-transcriber
   environment: production
 
 monitoring:
