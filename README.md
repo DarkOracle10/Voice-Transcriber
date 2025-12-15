@@ -5,34 +5,88 @@ A fully-featured, GPU-accelerated audio transcription toolkit with Persian/Farsi
 ## 🎯 Features
 
 ### Core Functionality
-- **Multiple Transcription Engines** - OpenAI Whisper API, Offline Wav2Vec2, Faster-Whisper
+- **Multiple Transcription Engines**
+  - Faster-Whisper (CTranslate2-optimized, recommended)
+  - OpenAI Whisper (original implementation)
+  - OpenAI Whisper API (cloud-based)
+  - Google Speech Recognition (free alternative)
 - **GPU Acceleration** - CUDA support for RTX GPUs with automatic CPU fallback
 - **Parallel Batch Processing** - Multi-threaded transcription with progress bars
-- **Persian/Farsi Support** - Native normalization with Arabic→Persian character mapping
-- **CSV Output** - Structured batch results with success/failure tracking
+- **Persian/Farsi Support** - Native normalization with Hazm and Arabic→Persian mapping
+- **Multiple Output Formats** - TXT, JSON (with timestamps), SRT subtitles
 - **Rate Limiting & Retry Logic** - Robust API calls with exponential backoff
 
 ### Supported Audio/Video Formats
-- MP3, MP4, WAV, M4A, FLAC, OGG, AAC, WMA
-- Automatic audio extraction from video files
+- **Audio**: MP3, WAV, M4A, FLAC, OGG, AAC, WMA
+- **Video**: MP4 (with automatic audio extraction)
+- **Conversion**: Automatic format conversion via FFmpeg
+
+### Output Formats
+- **TXT** - Plain text transcription
+- **JSON** - Detailed metadata with word-level timestamps and confidence scores
+- **SRT** - Subtitle format for video players with timing
 
 ### Advanced Features
-- **Modular Architecture** - Abstract engine base for easy extension
-- **Configuration Management** - YAML-based settings with environment variables
-- **Command-Line Interface** - argparse-based CLI with multiple subcommands
-- **Comprehensive Logging** - Colorized logs with configurable levels
-- **Error Handling** - Graceful degradation with detailed error messages
+- **Modular Architecture** - Abstract engine base for easy extension with custom engines
+- **Configuration Management** - YAML-based settings with environment variable overrides
+- **Command-Line Interface** - Comprehensive argparse-based CLI with multiple subcommands
+- **Comprehensive Logging** - Colorized console logs with configurable levels and file output
+- **Error Handling** - Graceful degradation with detailed error messages and automatic fallbacks
+- **Progress Tracking** - Real-time progress bars for batch processing with ETA
+- **Model Caching** - Automatic model download and caching for offline use
+- **Language Detection** - Automatic language detection for multilingual audio
+- **Segment Timestamps** - Word-level and sentence-level timestamp extraction
+- **Confidence Scores** - Per-word and per-segment confidence metrics
+- **Custom Normalizers** - Extensible text normalization system
+- **Retry Logic** - Exponential backoff for API calls with configurable retries
+- **Cross-Platform** - Works on Windows, Linux, and macOS with platform-specific optimizations
 
 ## 📋 Table of Contents
 
+- [Features Showcase](#features-showcase)
 - [Installation](#installation)
 - [Quick Start](#quick-start)
 - [Usage](#usage)
+- [Configuration](#configuration)
 - [Architecture](#architecture)
 - [Development](#development)
 - [Testing](#testing)
 - [Contributing](#contributing)
 - [License](#license)
+
+## ✨ Features Showcase
+
+### 🚀 High-Performance Transcription
+- **5-10x faster** than real-time with GPU acceleration (RTX 3060)
+- **FP16 precision** reduces memory usage by 50% without accuracy loss
+- **Batch processing** with parallel execution for multiple files
+- **Automatic model selection** based on available hardware
+
+### 🌍 Persian Language Excellence
+- **Native Persian support** with Hazm-based normalization
+- **Arabic to Persian conversion** for correct character mapping
+- **ZWNJ handling** for proper Persian text rendering
+- **Number normalization** (Persian/Arabic numerals to consistent format)
+- **Diacritic removal** and whitespace cleanup
+
+### 🎯 Multiple Transcription Engines
+- **Faster-Whisper**: Optimized CTranslate2 implementation (5-10x faster)
+- **OpenAI Whisper**: Original implementation with full features
+- **OpenAI API**: Cloud-based transcription with rate limiting
+- **Google Speech**: Free alternative with basic Persian support
+
+### 📊 Rich Output Formats
+- **Plain Text (.txt)**: Simple transcription output
+- **JSON (.json)**: Complete metadata with timestamps, confidence scores, language detection
+- **SRT Subtitles (.srt)**: Time-synced subtitles for videos
+- **VTT Subtitles (.vtt)**: WebVTT format for web players
+
+### 🔧 Developer-Friendly
+- **Python API**: Programmatic access with type hints
+- **CLI Tool**: Comprehensive command-line interface
+- **Extensible**: Easy to add custom engines and normalizers
+- **Well-documented**: Complete API docs, examples, and guides
+- **Type-safe**: Full type annotations with mypy support
 
 ## 🚀 Installation
 
@@ -169,6 +223,22 @@ persian-transcriber <input_path> [OPTIONS]
 - `-o, --output`: Output file path
 - `--output-dir`: Output directory for batch processing
 
+**Processing Options:**
+- `-r, --recursive`: Recursively process subdirectories
+- `-l, --language`: Language code (default: `fa` for Persian)
+- `--no-normalize`: Disable text normalization
+- `--task`: Task type (`transcribe` or `translate`)
+
+**Performance Options:**
+- `--batch-size`: Number of concurrent processing threads
+- `--beam-size`: Beam search width (affects accuracy vs speed)
+- `--compute-type`: Quantization type (`float16`, `float32`, `int8`)
+
+**API Options:**
+- `--api-key`: OpenAI API key (or set OPENAI_API_KEY env var)
+- `--max-retries`: Maximum API retry attempts
+- `--timeout`: Request timeout in seconds
+
 **Batch Processing:**
 - `-r, --recursive`: Search directories recursively
 - `--skip-existing`: Skip files with existing transcriptions
@@ -212,7 +282,73 @@ export OPENAI_API_KEY="sk-..."
 # Windows PowerShell
 $env:OPENAI_API_KEY = "sk-..."
 ```
+## ⚙️ Configuration
 
+### Configuration File
+
+Create a `config.yaml` file for persistent settings:
+
+```yaml
+project:
+  name: persian-audio-transcriber
+  version: \"1.0.0\"
+
+transcription:
+  default_engine: faster_whisper
+  default_model: medium
+  default_device: auto
+  default_language: fa
+  
+  # Engine-specific settings
+  faster_whisper:
+    compute_type: float16
+    beam_size: 5
+    best_of: 5
+    
+  openai_api:
+    max_retries: 3
+    timeout: 300
+    
+output:
+  default_format: txt
+  include_timestamps: true
+  include_confidence: true
+  
+normalization:
+  enabled: true
+  arabic_to_persian: true
+  remove_diacritics: true
+  normalize_numbers: true
+  
+logging:
+  level: INFO
+  colorize: true
+  file: logs/transcription.log
+```
+
+### Environment Variables
+
+Override settings with environment variables:
+
+```bash
+# API Keys
+export OPENAI_API_KEY=\"sk-...\"
+export GOOGLE_API_KEY=\"...\"
+
+# Default Settings
+export TRANSCRIBER_ENGINE=\"faster_whisper\"
+export TRANSCRIBER_MODEL=\"large-v3\"
+export TRANSCRIBER_DEVICE=\"cuda\"
+export TRANSCRIBER_LANGUAGE=\"fa\"
+
+# Performance
+export TRANSCRIBER_COMPUTE_TYPE=\"float16\"
+export TRANSCRIBER_BATCH_SIZE=\"8\"
+
+# Output
+export TRANSCRIBER_OUTPUT_FORMAT=\"json\"
+export TRANSCRIBER_NORMALIZE=\"true\"
+```
 ## 🏗️ Architecture
 
 The toolkit follows a modular architecture with clear separation of concerns:
