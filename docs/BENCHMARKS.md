@@ -1,6 +1,6 @@
-# Performance Benchmarks
+# Performance Benchmarks - Persian Audio Transcriber
 
-Performance metrics for different configurations.
+Performance metrics for different transcription engine configurations.
 
 ## Test System
 

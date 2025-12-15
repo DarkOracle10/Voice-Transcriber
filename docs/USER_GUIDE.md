@@ -1,6 +1,6 @@
-# User Guide
+# User Guide - Persian Audio Transcriber
 
-Comprehensive guide for using the Persian Audio Transcription Tool.
+Comprehensive guide for using the Persian Audio Transcriber toolkit.
 
 ## Table of Contents
 

@@ -340,7 +340,7 @@ This project is licensed under the MIT License - see the `LICENSE` file for deta
 
 ## 📞 Support
 
-- **Issues**: [GitHub Issues](https://github.com/DarkOracle10/Voice-Transcriber/issues)
+- **Issues**: [GitHub Issues](https://github.com/DarkOracle10/persian-audio-transcriber/issues)
 - **Documentation**: See `docs/` directory
 - **Troubleshooting**: `docs/TROUBLESHOOTING.md`
 

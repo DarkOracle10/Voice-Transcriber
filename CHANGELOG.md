@@ -1,4 +1,4 @@
-# Changelog
+# Changelog - Persian Audio Transcriber
 
 All notable changes to this project will be documented in this file.
 
@@ -54,6 +54,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Troubleshooting guide
 - Usage examples
 
+## [1.0.1] - 2025-12-15
+
+### Changed
+- **Project renamed** to `persian-audio-transcriber` for better clarity
+- **CLI command** renamed from `voice-transcriber` to `persian-transcriber`
+- Updated all documentation to reflect new project name
+- Updated repository URLs to `https://github.com/DarkOracle10/persian-audio-transcriber`
+- Updated package names in setup.py and pyproject.toml
+
+### Improved
+- Enhanced .gitignore to properly exclude only generated files
+- Added comprehensive project structure documentation
+- Updated all API documentation references
+- Improved ARCHITECTURE.md with project name
+- Enhanced PROJECT_SUMMARY.md with complete project details
+
+### Fixed
+- Corrected all repository URLs across documentation
+- Fixed console script names in packaging files
+- Updated config.yaml with correct project name
+
 ## [Unreleased]
 
 ### Planned
@@ -63,4 +84,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Docker containerization
 - REST API endpoints
 - Database integration for transcription storage
+- Frontend dashboard for transcription management
 

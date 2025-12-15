@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "voice-transcriber"
+name = "persian-audio-transcriber"
 version = "1.0.0"
 description = "GPU-accelerated voice transcription toolkit with Persian/Farsi language support"
 readme = "README.md"
@@ -87,19 +87,19 @@ docs = [
     "mkdocstrings>=0.29.1",
 ]
 all = [
-    "voice-transcriber[persian,gpu,dev,docs]",
+    "persian-audio-transcriber[persian,gpu,dev,docs]",
 ]
 
 [project.scripts]
-voice-transcriber = "persian_transcriber.cli:main"
+persian-transcriber = "persian_transcriber.cli:main"
 vtranscribe = "persian_transcriber.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/DarkOracle10/Voice-Transcriber"
-Documentation = "https://github.com/DarkOracle10/Voice-Transcriber#readme"
-Repository = "https://github.com/DarkOracle10/Voice-Transcriber.git"
-Issues = "https://github.com/DarkOracle10/Voice-Transcriber/issues"
-Changelog = "https://github.com/DarkOracle10/Voice-Transcriber/blob/main/CHANGELOG.md"
+Homepage = "https://github.com/DarkOracle10/persian-audio-transcriber"
+Documentation = "https://github.com/DarkOracle10/persian-audio-transcriber#readme"
+Repository = "https://github.com/DarkOracle10/persian-audio-transcriber.git"
+Issues = "https://github.com/DarkOracle10/persian-audio-transcriber/issues"
+Changelog = "https://github.com/DarkOracle10/persian-audio-transcriber/blob/main/CHANGELOG.md"
 
 [tool.setuptools]
 package-dir = {"" = "src"}

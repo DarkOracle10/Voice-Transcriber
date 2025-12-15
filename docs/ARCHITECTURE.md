@@ -1,9 +1,10 @@
 # Architecture Documentation
 
-## Persian Audio/Video Transcription Tool
+## Persian Audio Transcriber
 
 **Version:** 2.0.0  
-**Last Updated:** December 2025
+**Last Updated:** December 2025  
+**Project:** persian-audio-transcriber
 
 ---
 

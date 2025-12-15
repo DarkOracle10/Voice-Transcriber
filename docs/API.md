@@ -1,6 +1,6 @@
 # API Documentation
 
-Python API reference for programmatic use of the Voice Transcription toolkit.
+Python API reference for programmatic use of the Persian Audio Transcriber toolkit.
 
 ---
 

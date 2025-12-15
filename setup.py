@@ -16,18 +16,18 @@ readme_file = Path(__file__).parent / "README.md"
 long_description = readme_file.read_text(encoding="utf-8") if readme_file.exists() else ""
 
 setup(
-    name="voice-transcriber",
+    name="persian-audio-transcriber",
     version=version,
     author="DarkOracle10",
     author_email="darkoracle3860@gmail.com",
     description="GPU-accelerated voice transcription toolkit with Persian/Farsi language support",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/DarkOracle10/Voice-Transcriber",
+    url="https://github.com/DarkOracle10/persian-audio-transcriber",
     project_urls={
-        "Bug Tracker": "https://github.com/DarkOracle10/Voice-Transcriber/issues",
-        "Documentation": "https://github.com/DarkOracle10/Voice-Transcriber#readme",
-        "Source Code": "https://github.com/DarkOracle10/Voice-Transcriber",
+        "Bug Tracker": "https://github.com/DarkOracle10/persian-audio-transcriber/issues",
+        "Documentation": "https://github.com/DarkOracle10/persian-audio-transcriber#readme",
+        "Source Code": "https://github.com/DarkOracle10/persian-audio-transcriber",
     },
     packages=find_packages(where="src"),
     package_dir={"": "src"},
@@ -90,7 +90,7 @@ setup(
     },
     entry_points={
         "console_scripts": [
-            "voice-transcriber=persian_transcriber.cli:main",
+            "persian-transcriber=persian_transcriber.cli:main",
             "vtranscribe=persian_transcriber.cli:main",
         ],
     },

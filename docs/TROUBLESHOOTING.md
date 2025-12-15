@@ -1,6 +1,6 @@
-# Troubleshooting Guide
+# Troubleshooting Guide - Persian Audio Transcriber
 
-Common issues and solutions.
+Common issues and solutions for Persian Audio Transcriber.
 
 ## CUDA/CUDA DLL Issues
 

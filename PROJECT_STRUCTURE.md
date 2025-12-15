@@ -26,7 +26,7 @@
 ## Project Structure
 
 ```
-Voice-transcription-tool/
+persian-audio-transcriber/
 ├── main.py                    # Main application
 ├── README.md                  # Comprehensive documentation
 ├── PROJECT_SUMMARY.md         # One-page resume summary

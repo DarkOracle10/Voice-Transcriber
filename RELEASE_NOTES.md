@@ -1,4 +1,4 @@
-# Voice Transcriber v1.0.0 (2025-12-13)
+# Persian Audio Transcriber v1.0.0 (2025-12-13)
 
 A fully-featured, GPU-accelerated voice transcription toolkit with native Persian/Farsi support, modular engines, and a polished CLI — ready for your resume.
 

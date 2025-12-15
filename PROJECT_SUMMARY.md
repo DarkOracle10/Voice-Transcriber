@@ -1,10 +1,11 @@
-# Persian Audio/Video Transcription Tool
+# Persian Audio Transcriber
 ## Project Summary for Resume
 
 ---
 
 ## Project Title
-**Persian Audio/Video Transcription Tool with GPU Acceleration**
+**Persian Audio Transcriber - GPU-Accelerated Transcription System**
+**Repository:** https://github.com/DarkOracle10/persian-audio-transcriber
 
 ## Overview
 A production-ready, GPU-accelerated audio and video transcription system with native Persian/Farsi language support, featuring advanced text normalization, multiple transcription engines, and comprehensive output formats.
@@ -99,21 +100,40 @@ A production-ready, GPU-accelerated audio and video transcription system with na
 
 ## Project Structure
 ```
-Voice-transcription-tool/
-├── main.py              # Main transcription module
-├── README.md            # Comprehensive documentation
-├── requirements.txt     # Python dependencies
-├── setup.py            # Package installation script
-├── LICENSE             # MIT License
-├── CHANGELOG.md        # Version history
-├── CONTRIBUTING.md     # Contribution guidelines
-├── .gitignore          # Git ignore rules
-├── docs/               # Documentation folder
+persian-audio-transcriber/
+├── main.py                   # Main transcription module
+├── README.md                 # Comprehensive documentation
+├── requirements.txt          # Python dependencies
+├── pyproject.toml           # Modern Python packaging
+├── setup.py                 # Package installation script
+├── LICENSE                  # MIT License
+├── CHANGELOG.md             # Version history
+├── CONTRIBUTING.md          # Contribution guidelines
+├── PROJECT_SUMMARY.md       # This file
+├── PROJECT_STRUCTURE.md     # Detailed structure
+├── RELEASE_NOTES.md         # Release information
+├── .gitignore              # Git ignore rules
+├── src/                    # Source code
+│   └── persian_transcriber/
+│       ├── __init__.py
+│       ├── cli.py          # Command-line interface
+│       ├── engines/        # Transcription engines
+│       ├── normalizers/    # Text normalization
+│       ├── utils/          # Utility functions
+│       └── api/            # API endpoints
+├── docs/                   # Documentation folder
 │   ├── USER_GUIDE.md
 │   ├── API.md
+│   ├── ARCHITECTURE.md
 │   ├── TROUBLESHOOTING.md
-│   └── BENCHMARKS.md
-└── PROJECT_SUMMARY.md  # This file
+│   ├── BENCHMARKS.md
+│   └── SETUP.md
+├── tests/                  # Unit tests
+├── benchmarks/             # Performance benchmarks
+├── config/                 # Configuration files
+├── logs/                   # Logging utilities
+├── models/                 # Model storage
+└── examples/              # Example files
 ```
 
 ## Skills Demonstrated
