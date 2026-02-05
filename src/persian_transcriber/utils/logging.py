@@ -156,18 +156,19 @@ class ColoredFormatter(logging.Formatter):
         if not hasattr(sys.stderr, "isatty") or not sys.stderr.isatty():
             return False
 
-        if sys.platform != "win32":
-            return True
+        platform = str(sys.platform)
+        if platform == "win32":
+            # Windows-specific color support check
+            try:
+                import ctypes
 
-        # Windows-specific color support check
-        try:
-            import ctypes
+                kernel32 = ctypes.windll.kernel32
+                kernel32.SetConsoleMode(kernel32.GetStdHandle(-11), 7)
+                return True
+            except Exception:
+                return False
 
-            kernel32 = ctypes.windll.kernel32
-            kernel32.SetConsoleMode(kernel32.GetStdHandle(-11), 7)
-            return True
-        except Exception:
-            return False
+        return True
 
     def _get_color_code(self, level_name: str, level_no: int) -> str:
         """Get ANSI color code for a log level."""
