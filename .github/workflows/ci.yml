@@ -38,7 +38,7 @@ jobs:
         run: black --check .
 
       - name: Run mypy type checks
-        run: mypy persian_transcriber
+        run: mypy src/persian_transcriber
 
       - name: Upload coverage to Codecov
         if: ${{ success() && env.CODECOV_TOKEN != '' }}
